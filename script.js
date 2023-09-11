@@ -108,6 +108,7 @@ function createRandomNumber(buttonRect) {
 
 const videoQueue = [
     "videos/video.mp4",
+    "videos/video2.mp4",
     // ... add more video paths as needed
 ];
 let currentVideoIndex = 0;
@@ -116,6 +117,10 @@ let currentVideoIndex = 0;
 
 function playNextVideo() {
     if (currentVideoIndex >= videoQueue.length) return;
+
+    //shuffle queue
+    videoQueue.sort(() => Math.random() - 0.5);
+
 
     const video = document.createElement("video");
     video.src = videoQueue[currentVideoIndex];
