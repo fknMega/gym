@@ -1,0 +1,146 @@
+
+
+/* Basic Styling */
+body {
+    /* set Brush Script MT as the default font family */
+    font-family: "Brush Script MT", cursive;
+    font-weight: bold;
+    color: white;
+    margin: 0;
+    padding: 0;
+    background-color: black;
+}
+/* Add or update in your styles.css */
+
+/* Add or update in your styles.css */
+.number {
+    position: absolute;
+    opacity: 0;
+    transition: opacity 0.5s ease-out, transform 1s ease-out;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.number.fade-in {
+    opacity: 1;
+    transform: translateY(-20px);
+}
+
+.number.fade-out {
+    opacity: 0;
+    transform: translateY(-40px);
+}
+.text-animation {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 0;
+    opacity: 0;
+    transition: opacity 0.5s ease-out, font-size 1s ease-out;
+    text-align: center;
+}
+
+.fade-in-out {
+    animation: fadeInOut 3s forwards;
+}
+
+.heart-animation {
+    animation: heartAnimation 3s infinite;
+}
+
+@keyframes fadeInOut {
+    0% { opacity: 0; font-size: 50px; }
+    25% { opacity: 1; font-size: 30px; }
+    75% { opacity: 1; font-size: 30px; }
+    100% { opacity: 0; font-size: 50px; }
+}
+
+.t-animation {
+    animation: tAnimation 2s infinite;
+}
+
+@keyframes tAnimation {
+    0%, 20% { content: "T"; }
+    40% { content: "TT"; }
+    60% { content: "TTT"; }
+    80% { content: "TTTT"; }
+    100% { content: "TTTTT"; }
+}
+
+
+video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+}
+
+#demoButton {
+    padding: 10px 20px;
+    margin: 2rem;
+    margin-bottom: 0;
+    border: none;
+    border-radius: 1rem;
+    outline: none;
+    cursor: pointer;
+    color: white;
+    font-weight: bold;
+    background-color: #00BFFF; /* Starting color */
+    transition: background-color 0.3s ease; /* Smooth transition between color changes */
+    animation: colorChange 3s infinite;
+}
+
+@keyframes colorChange {
+    0% { background-color: #00BFFF; } /* Deep Sky Blue */
+    25% { background-color: #1E90FF; } /* Dodger Blue */
+    50% { background-color: #20B2AA; } /* Light Sea Green */
+    75% { background-color: #48D1CC; } /* Medium Turquoise */
+    100% { background-color: #00BFFF; } /* Deep Sky Blue */
+}
+
+
+.animation {
+    background-image: linear-gradient(270deg, red, yellow, green, cyan, blue, violet, red, yellow, green, cyan, blue, violet);
+    background-size: 200% auto;
+    color: transparent;
+    -webkit-background-clip: text;
+    animation: rainbow 3s infinite linear, glow 1.5s infinite alternate;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.8);
+}
+
+@keyframes rainbow {
+    0% { background-position: 100% 0; }
+    50% { background-position: 0 100%; }
+    100% { background-position: -100% 0; }
+}
+
+@keyframes glow {
+    0% { text-shadow: 0 0 5px rgba(255, 255, 255, 0.7), 0 0 10px rgba(255, 255, 255, 0.8), 0 0 15px rgba(255, 0, 150, 0.9); }
+    100% { text-shadow: 0 0 10px rgba(255, 255, 255, 0.7), 0 0 20px rgba(255, 0, 150, 0.8), 0 0 25px rgba(0, 190, 255, 0.9); }
+}
+
+header, nav, main, footer {
+    padding: 5px;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+/* Mobile responsiveness */
+@media only screen and (max-width: 768px) {
+    nav li {
+        display: block;
+        margin-bottom: 10px;
+    }
+}
