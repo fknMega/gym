@@ -119,7 +119,7 @@ function playNextVideo() {
     if (currentVideoIndex >= videoQueue.length) return;
 
     //shuffle queue
-    //videoQueue.sort(() => Math.random() - 0.5);
+    videoQueue.sort(() => Math.random() - 0.5);
 
 
     const video = document.createElement("video");
