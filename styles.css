@@ -45,9 +45,6 @@ body {
     animation: fadeInOut 3s forwards;
 }
 
-.heart-animation {
-    animation: heartAnimation 3s infinite;
-}
 
 @keyframes fadeInOut {
     0% { opacity: 0; font-size: 50px; }
